@@ -12,6 +12,8 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
+  const [loginUser, { err }] = useMutation(LOGIN_USER);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -91,6 +93,7 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
+      {err && <div>Login Failed</div>}
     </>
   );
 };

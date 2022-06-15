@@ -14,7 +14,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, { error }] = useMutation(ADD_USER);
+  const [addUser, { err }] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -111,6 +111,7 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
+      {err && <div>Signup Failed</div>}
     </>
   );
 };
