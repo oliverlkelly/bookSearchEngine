@@ -1,7 +1,8 @@
 import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
-import { useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 
 //import { getMe, deleteBook } from '../utils/API';
 import { GET_ME } from '../utils/queries';

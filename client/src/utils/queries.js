@@ -1,7 +1,8 @@
 import gql from "graphql-tag";
 
 export const GET_ME = gql `
-    me {
+{    
+me {
         _id
         username
         email 
@@ -15,4 +16,5 @@ export const GET_ME = gql `
             description
         }
     }
+}
 `;
